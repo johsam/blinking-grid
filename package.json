@@ -1,0 +1,17 @@
+{
+  "name": "blinking-grid",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "git@github.com:johsam/blinking-grid.git",
+  "author": "johsam",
+  "license": "MIT",
+  "homepage": "https://johsam.github.io/blinking-grid",
+  "scripts": {
+    "start": "./node_modules/.bin/lite-server",
+    "deploy" : "./node_modules/.bin/gh-pages -d dist"
+  },
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "lite-server": "^2.4.0"
+  }
+}
