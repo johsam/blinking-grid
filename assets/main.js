@@ -1,6 +1,6 @@
 /*eslint no-plusplus: ["error", { "allowForLoopAfterthoughts": true }]*/
 
-$(function() {
+$(() => {
     const frontCols = 90;
     const frontRows = 30;
 
@@ -13,7 +13,7 @@ $(function() {
     let angle = 0;
 
     const flipIt = () => {
-        const g2r = a => (a * Math.PI) / 180.0;
+        const g2r = (a) => (a * Math.PI) / 180.0;
 
         $('.wrapper').snabbt({
             rotation: [0, g2r(angle), 0],
@@ -24,7 +24,7 @@ $(function() {
                     angle %= 360;
                     $('.wrapper').snabbt({ rotation: [0, g2r(angle), 0], duration: 0 });
                 }
-            }
+            },
         });
     };
 
@@ -46,11 +46,8 @@ $(function() {
                 const r = Math.floor(rows * Math.random());
                 const c = Math.floor(cols * Math.random());
 
-                $(`#${_id}_${r}_${c}`)
-                    .stop()
-                    .css('opacity', 0.9)
-                    .fadeTo('slow', 0.3);
-            }
+                $(`#${_id}_${r}_${c}`).stop().css('opacity', 0.9).fadeTo('slow', 0.3);
+            },
         };
     };
 
